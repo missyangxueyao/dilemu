@@ -1,0 +1,9 @@
+.comment-title h1,.comment-title span{
+    color: #e3676d;
+}
+.comment-time{
+    color: #999999;
+}
+.comment-user,.comment-commentText{
+    color: #333333;
+}

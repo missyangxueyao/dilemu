@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>欢乐时光-微信支付</title>
+    <link rel="stylesheet" href="dilemu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dilemu/css/public.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var param = get_param();
+    getThisData();
+    function getThisData() {
+        if (!checkLogin(false)) {
+            return false;
+        }
+        requestData("js_pay.htm", {orderId: param.id, flag: 0}, function (data) {
+            if (!data.success) {
+                show_alert(data.msg);
+            }
+            weChatPay(data.data);
+        });
+    }
+
+    function weChatPay(config){
+        wx.config({
+            debug : false,	// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId : config.appId,	// 必填，公众号的唯一标识
+            timestamp : config.timeStamp,	// 必填，生成签名的时间戳
+            nonceStr : config.nonceStr,	// 必填，生成签名的随机串
+            signature : config.signature,	// 必填，签名，见附录1
+            jsApiList : [
+                "checkJsApi",
+                "chooseWXPay"
+            ]	// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function(){
+            wx.chooseWXPay({
+                timestamp : config.timeStamp,
+                nonceStr : config.nonceStr,
+                package : config.package,
+                signType : config.signType,
+                paySign : config.paySign,
+                success : function (res) {
+                    // 支付成功后的回调函数
+                    WeixinJSBridge.log(res.err_msg);
+                    //alert("支付接口:"+res.err_code + res.err_desc + res.err_msg);
+                    if(!res.err_msg){
+                        //支付完后.跳转到成功页面.
+                        window.location.replace("pay.html?id="+param.id);
+                    } else {
+                        window.location.replace("payFail.html?id="+param.id);
+                    }
+                },
+                cancel: function (res) {
+                    // 取消支付后的回调函数
+                    window.location.replace("payFail.html?id="+param.id);
+                }
+            });
+        });
+        wx.error(function(res){
+            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+            window.location.replace("payFail.html?id="+param.id);
+        });
+        wx.checkJsApi({
+            jsApiList: ['chooseWXPay'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+            success: function(res) {
+                //alert("检测接口:"+res.err_msg);
+            }
+        });
+    }
+</script>
+</body>
+</html>

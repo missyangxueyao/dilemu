@@ -1,0 +1,87 @@
+body{
+    background: #f2f2f2;
+}
+.header{
+    height:0.8rem;
+    background: #feabb5;
+    color: #ffffff;
+    text-align: center;
+    line-height:0.8rem;
+    font-size: 0.3rem;
+}
+.payState{
+    padding:1.365rem 0 0.3rem;
+    background: #ffffff url("../img/zf3.png") no-repeat;
+    background-position:center 0.34rem;
+    background-size: 1.037rem;
+    margin-bottom:0.085rem;
+}
+.payState p{
+    margin-top:0.128rem;
+    font-size:0.306rem;
+    color: #e3676d;
+    line-height:0.561rem;
+    text-align: center;
+}
+.payState span{
+    display: block;
+    font-size: 0.221rem;
+    color: #999999;
+    line-height:0.476rem;
+    text-align: center;
+}
+.payover{
+    margin:0.212rem auto;
+    width:3.808rem;
+    clear: both;
+    overflow: hidden;
+}
+.payover a{
+    width:1.445rem;
+    height:0.51rem;
+    display: block;
+    text-align: center;
+    font-size: 0.256rem;
+    line-height:0.51rem;
+}
+.payover a:nth-child(1){
+    background: url("../img/zf2.png") no-repeat;
+    background-size: 100%;
+    float: left;
+    color: #5ac3e7;
+}
+.payover a:nth-child(2){
+    background: url("../img/zf1.png") no-repeat;
+    background-size: 100%;
+    float: right;
+    color: #e3676d;
+}
+.sameProduct{
+    background: #ffffff;
+}
+.sameProduct h1{
+    line-height:0.85rem;
+    text-align: center;
+    font-size: 0.289rem;
+    color: #333333;
+}
+.row{
+    margin-left:0;
+    margin-right:0;
+}
+.col-xs-6{
+    padding-left:0.1rem;
+    padding-right:0.1rem;
+}
+.col-xs-6 img{
+    width:100%;
+}
+.col-xs-6 h1{
+    line-height:0.512rem;
+}
+.col-xs-6 p{
+    text-align: center;
+    color: #e3676d;
+    font-size: 0.289rem;
+    line-height:0.512rem;
+}

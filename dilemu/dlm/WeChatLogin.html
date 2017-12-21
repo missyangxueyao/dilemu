@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<div id="box" style="display: none;">
+    <header>
+        <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+        <div class="head-center">绑定手机号</div>
+        <div class="head-right"></div>
+    </header>
+    <div class="head" style="height: 0.9rem;"></div>
+    <div class="input-box">
+        <input type="number" id="mobile" placeholder="手机号" onkeyup="inputOnKeyUp(this);"/>
+        <i class="icon-close" onclick="clearSiblingInput(this);"></i>
+    </div>
+    <div class="input-box">
+        <input type="number" id="sms_code" style="width: 3rem;" placeholder="验证码" onkeyup="inputOnKeyUp(this);"/>
+        <span style="width: 1.2rem;" onclick="getMobileCode(this, 3);">获取验证码</span>
+        <i class="icon-close" onclick="clearSiblingInput(this);"></i>
+    </div>
+    <div class="login-btn" onclick="bindUserPone();">确 定</div>
+    <div class="other-action">
+        <a href="find_password.html">找回密码</a>
+        <a href="register.html">快速注册</a>
+    </div>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript">
+    getWeChatInfo();
+</script>
+</body>
+</html>

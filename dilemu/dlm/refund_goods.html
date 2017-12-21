@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="select-type/mobile-select-area.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="select-type/dialog.js"></script>
+    <script type="text/javascript" src="select-type/mobile-select-area.js"></script>
+    <script type="text/javascript" src="js/aliYunUpload.1.0.js"></script>
+    <script type="text/javascript" src="js/jquery.upload.js"></script>
+    <style type="text/css">
+        .ui-scroller>div{width: 100%;}
+        .MobileSelectDate .ui-scroller>div{width: 33%}
+    </style>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">申请退货退款</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<div class="right_content">
+    <div class="order_goods">
+        <img src="images/buy_limit/goods@2x.png" alt=""/>
+        <div class="order_goods_right">
+            <h1>迪乐姆 创意 手工制作听话的薯片筒86s迪乐姆 创意 手工制作听话的薯片筒86s</h1>
+            <h2>颜色：红色</h2>
+            <h3><em>￥18.00</em>x2</h3>
+        </div>
+    </div>
+</div>
+<div class="base-content">
+    <div class="order-refund-status"><label>退款原因<input type="text" id="re" readonly="readonly" placeholder="请选择"/></label></div>
+    <div class="order-refund-money">
+        <h1>退款金额：<em>￥</em><input type="number" id="return_fee" onchange="checkMoneyNum(this);" placeholder="请输入退款金额" style="height: 0.4rem; font-size: 0.23rem; margin-left: 0.1rem; color: #E0696D;"/></h1>
+        <h2>最多￥41.00 &nbsp; 含发货邮费￥5.00</h2>
+    </div>
+    <div class="order-refund-status">退款说明：<input style="text-align: left; width: 4.7rem;" id="return_content" type="text" placeholder="选填"/></div>
+</div>
+<div class="base-content">
+    <div class="order-refund-update">
+        <span>上传凭证</span>
+        <div class="upload-btn"><input type="file" id="file" name="imgFile" style="height: 100%; width: 100%; opacity: 0"/></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<span class="btn" id="delivery-after-btn" style="position: inherit; margin: 1rem auto 0;" onclick="submitThisForm();">提交</span>
+<div style="height: 0.5rem;"></div>
+<script type="text/javascript" src="js/refund.1.0.js"></script>
+</body>
+</html>

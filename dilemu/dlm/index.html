@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="dilemu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dilemu/css/swiper.min.css">
+    <link rel="stylesheet" href="dilemu/css/reset.css">
+    <link rel="stylesheet" href="dilemu/css/public.css">
+    <link rel="stylesheet" href="dilemu/css/index.css">
+    <script type="text/javascript" charset="UTF-8" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+<header style="position: fixed;
+    z-index: 3;">
+    <div class="scan" onclick="functionScan()"></div>
+    <div class="mainTitle">欢乐时光</div>
+    <a class="search" href="seach.html"></a>
+</header>
+<div class="head"></div>
+<div class="nav" style="overflow-x: scroll; overflow-y: hidden;/* position: fixed; top: 0.8rem; left: 0; z-index: 2;*/ background: #FFF; box-shadow: 0 0 0.04rem #ABABAB;">
+</div>
+<div id="tabs-container" class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--八大智能-->
+        <!--<div class="swiper-slide">
+            <div class="tabContent"  style="display: block;">
+                <div class="banner">
+                    <img onerror="this.src='images/none-image.png'" src="img/yr1.png" alt="">
+                    <div class="bannerPopup index-bannerpop">
+                        <h1>幼儿小心机</h1>
+                        <p></p>
+                        <h2>八大智能</h2>
+                        <a href="goodsdetail.html">查看详情</a>
+                    </div>
+                </div>
+                <div class="container containerList">
+                    <div class="swiper-container swiper-youer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-goods">
+                                <a href="goodsdetail.html">
+                                    <img onerror="this.src='images/none-image.png'" src="img/new3.png" alt="">
+                                    <h1>果冻蜡烛</h1>
+                                    <p>幼儿玩具</p>
+                                    <p>￥18</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        &lt;!&ndash;最新&ndash;&gt;
+        <div class="swiper-slide nearnew">
+            <div class="newbanner-box"></div>
+            <div class="swiper-container new-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide new-banner">
+                        <a href="bdzn.html">
+                            <img onerror="this.src='images/none-image.png'" src="img/yr2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide new-banner">
+                        <a href="bdzn.html">
+                            <img onerror="this.src='images/none-image.png'" src="img/youer3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                &lt;!&ndash; 如果需要分页器 &ndash;&gt;
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="flashSale">
+                <h1>- 今日限时抢购 -</h1>
+                <div id="clock"></div>
+                &lt;!&ndash;限时抢购轮播图&ndash;&gt;
+                <div class="swiper-container swiper-container-horizontal new-flashSalebanner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img onerror="this.src='images/none-image.png'" src="img/zx1.png" onclick="redirect('../buyLimit.html')" class="main-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img onerror="this.src='images/none-image.png'" src="img/zx1.png" onclick="redirect('../buyLimit.html')" class="main-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination new-flashSalepagination"></div>
+            </div>
+            <div class="teamBuy">
+                <h2 class="teamBuy-title">- 超值团购 -</h2>
+                <a href="teambuy.html">
+                    <img onerror="this.src='images/none-image.png'" src="img/tg.png" alt="" class="team-img">
+                </a>
+                <div class="container containerList">
+                    <div class="swiper-container swiper-youer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-goods">
+                                <a href="#">
+                                    <img onerror="this.src='images/none-image.png'" src="img/new1.png" alt="">
+                                    <h1>梦幻星星</h1>
+                                    <p>幼儿玩具</p>
+                                    <p>￥11222</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabContent"  style="display: block;">
+            <div class="banner">
+                <img onerror="this.src='images/none-image.png'" src="img/prduct_list5.png" alt="">
+                <div class="bannerPopup">
+                    <h1>幼儿小心机</h1>
+                    <p></p>
+                    <h2>八大智能</h2>
+                    <a href="#">查看详情</a>
+                </div>
+            </div>
+            <div class="container containerList">
+                <div class="swiper-container swiper-youer">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-goods">
+                            <a href="#">
+                                <img onerror="this.src='images/none-image.png'" src="img/new1.png" alt="">
+                                <h1>果冻蜡烛</h1>
+                                <p>幼儿玩具</p>
+                                <p>￥18</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>-->
+    </div>
+</div>
+<div class="index-action-btn">
+    <span onclick="redirect('buycar.html', '', '', true);"></span>
+    <span onclick="redirect('member.html', '', '', true)"></span>
+</div>
+<script src="dilemu/js/jquery-1.8.3.min.js"></script>
+<script src="js/common.js"></script>
+<script src="dilemu/js/swiper.jquery.min.js"></script>
+<script src="dilemu/src/countdown.js"></script>
+<script type="text/javascript" src="dilemu/js/index.js"></script>
+</body>
+</html>

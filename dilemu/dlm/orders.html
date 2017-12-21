@@ -1,0 +1,39 @@
+<!-- 我的订单页面 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">订单管理</div>
+    <div class="head-right"></div>
+</header>
+<div class="head" style="height: 1.5rem;"></div>
+<div class="order_head">
+    <span data-type="">全部</span>
+    <span data-type="order_submit">待付款</span>
+    <span data-type="order_pay">待发货</span>
+    <span data-type="order_shipping">待收货</span>
+    <span data-type="order_receive">待评价</span>
+</div>
+<div class="order_list" id="order_list">
+</div>
+<div class="load_more" id="load_more"></div>
+<div id="none_order" style="display: none;">您暂时还没有订单</div>
+<script type="text/javascript" src="js/orderAction.1.0.js"></script>
+<script type="text/javascript" src="js/orders.1.0.js"></script>
+</body>
+</html>

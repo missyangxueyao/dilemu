@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d854e850-05ab-4462-9b5b-a6d409d2ebb0" name="dlm_pc" url="http://106.14.241.124">
+        <fileTransfer host="106.14.241.124" port="22" rootFolder="/usr/local/apache-tomcat-8.0.45/webapps/dilemu_pc" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

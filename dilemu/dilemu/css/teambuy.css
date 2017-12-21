@@ -1,0 +1,189 @@
+.teambuy-banner{
+    width:100%;
+    height:3.601rem;
+    position: relative;
+}
+.teambuy-banner img{
+    width:100%;
+    display: block;
+}
+.teambuy-banner span{
+    display: block;
+    width:0.734rem;
+    height:0.341rem;
+    position: absolute;
+    top:0;
+    left:0.265rem;
+    background: url("../img/tg1.png") no-repeat;
+    background-size:100%;
+}
+.teambuydetail{
+    padding:0 0.256rem;
+    margin-top:0.153rem;
+    overflow: hidden;
+}
+.teambuydetail h1{
+    font-size: 0.272rem;
+    color: #333333;
+    line-height:0.478rem;
+}
+.teambuydetail p{
+    font-size: 0.221rem;
+    line-height:0.374rem;
+    color: #999999;
+    text-align: left;
+}
+.teambuydetail p span{
+    display: inline-block;
+    color: #333333;
+    margin-left:1.98rem;
+}
+.teambuydetail-price{
+    float: left;
+    width:45%;
+    color: #999999;
+    font-size:0.221rem;
+}
+.teambuydetail-price span{
+    color: #e3676d;
+    display: inline-block;
+    padding-right:0.239rem;
+    line-height:1.02rem;
+    font-size: 0.273rem;
+}
+.teambuydetail-btn{
+    float: right;
+    /*overflow: hidden;*/
+    /*width:2.71rem;*/
+    /*height:0.5rem;*/
+    margin-top:0.221rem;
+}
+.teambuydetail-btn span{
+    display:block;
+    font-size: 0.221rem;
+    color: #e3676d;
+    /*width:1.527rem;*/
+    height:0.5rem;
+    line-height:0.5rem;
+    /*text-align: center;*/
+    padding-left:0.2rem;
+    background: url("../img/tg4.png") no-repeat;
+    background-size:1.572rem 0.5rem;
+}
+.teambuydetail-btn a{
+    display: inline-block;
+    width:1.156rem;
+    font-size: 0.221rem;
+    color: #ffffff;
+    background: #feabb5;
+    text-align: center;
+    line-height:0.5rem;
+    height:0.5rem;
+    margin-left:0.2rem;
+    border-radius: 3px;
+}
+
+
+/*我的团购页面*/
+/*.jiesuan-productNum{*/
+    /*margin-top:1.2rem;*/
+/*}*/
+/*.jiesuan-productNum span{*/
+    /*font-size: 0.221rem;*/
+    /*color: #e3676d;*/
+    /*line-height:0.901rem;*/
+    /*width:2rem;*/
+/*}*/
+/*.jiesuan-product{*/
+    /*position: relative;*/
+/*}*/
+/*.jiesuan-productText{*/
+    /*width:4.242rem;*/
+/*}*/
+/*.teampersonNum{*/
+    /*font-size: 0.221rem;*/
+    /*color: #e3676d;*/
+    /*line-height:0.901rem;*/
+    /*!*width:2rem;*!*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*bottom:0;*/
+    /*right:0.256rem;*/
+/*}*/
+.inveteFriends{
+    background: #ffffff;
+    overflow: hidden;
+
+}
+.inveteFriends p{
+    width:1.024rem;
+    height:1.024rem;
+    line-height:1.024rem;
+    background: url("../img/myteam1.png") no-repeat;
+    background-size: 100%;
+    margin:0.597rem auto 0;
+    color: #e3676d;
+    font-size: 0.256rem;
+    font-weight:bold;
+    text-align: center;
+}
+.inveteFriends h1{
+    margin-top: 0.383rem;
+    line-height: 0.516rem;
+    font-size: 0.256rem;
+    color: #333333;
+    text-align: center;
+}
+.clock{
+    font-size:0.306rem;
+    color: #e3676d;
+    text-align: center;
+    line-height:0.816rem;
+}
+.inveteFriends h2{
+    font-size: 0.221rem;
+    color: #666666;
+    margin-top:0.041rem;
+    line-height:0.935rem;
+    text-align: center;
+}
+.inveteFriends h2 span{
+    font-size: 0.256rem;
+    color: #e3676d;
+}
+.headpic{
+    width:100%;
+    text-align: center;
+}
+.headpic span{
+    display:inline-block;
+    width:1.045rem;
+    height:1.045rem;
+    /*margin:auto;*/
+    margin:0 0.17rem;
+}
+.headpic-has{
+    background: url("../img/headpic1.png") no-repeat;
+    background-size: 100%;
+}
+.headpic-no{
+    background: url("../img/headpic2.png") no-repeat;
+    background-size: 100%;
+}
+.inveteFriends-btn{
+    display: block;
+    border:none;
+    outline:none;
+    position: absolute;
+    bottom:0.51rem;
+    left:0.256rem;
+    margin:auto;
+    width:5.865rem;
+    height:0.656rem;
+    text-align: center;
+    color: #ffffff;
+    font-size:0.289rem;
+    font-weight:bold;
+    background: url("../img/invetefriendsbtn.png") no-repeat;
+    background-size:100%;
+}

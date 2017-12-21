@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="select-type/mobile-select-area.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="select-type/dialog.js"></script>
+    <script type="text/javascript" src="select-type/mobile-select-area.js"></script>
+</head>
+<body>
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">编辑收货地址</div>
+    <div class="head-right" onclick="deleteAddressInfo(this);" data-id="0" style="display: none;">删除</div>
+</header>
+<div class="head" style="height: 0.7rem;"></div>
+<div class="base-content">
+    <div class="order-refund-status">收货人<input type="text" id="realName" placeholder="真实姓名"/></div>
+    <div class="order-refund-status">手机号<input type="number" id="mobile" placeholder="11位手机号"/></div>
+    <div class="order-refund-status"><label>所在地区<input type="text" id="area" readonly="readonly" placeholder="省、市、区"/></label></div>
+    <div class="order-refund-status" style="height: 1.6rem;">详细地址<br/><input type="text" id="areaInfo" placeholder="街道门牌号" style="width: 5.8rem; padding-left: 0.1rem; text-align: left;"/></div>
+</div>
+<div class="base-content">
+    <div class="order-refund-status" onclick="checkedDefault(this);"><i class="icon-default-address"></i>默认收货地址<em>（确认订单时默认使用该地址）</em></div>
+</div>
+<span class="btn" id="delivery-after-btn" onclick="saveAddressInfo();">提交</span>
+<script type="text/javascript" src="js/address.js"></script>
+<script type="text/javascript">
+    var param = get_param();
+    var selectArea = new MobileSelectArea();
+    selectArea.init({trigger:'#area',data:'select-type/area.json', position:"bottom", id:'selectArea'});
+    if (param.id) {
+        $(".head-right").show();
+        setAddressInfo(param.id);
+    }
+</script>
+</body>
+</html>

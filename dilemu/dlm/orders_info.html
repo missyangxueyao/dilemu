@@ -1,0 +1,80 @@
+<!-- 我的订单页面 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--<script type="text/javascript" src="js/zclip/jquery.zclip.js"></script>-->
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="history.back();"></i></div>
+    <div class="head-center">订单详情</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<!-- 订单状态 -->
+<div class="orders-info-status no-pay">
+    <h1></h1>
+    <h2></h2>
+    <i class=""></i> <!-- dfh/dsh/ywc -->
+</div>
+<!-- 订单签收 -->
+<!--<div class="orders-info-sign">【上海】已签收，签收人是李某某，感谢您对平台的支持，期待再次为您服务！</div>-->
+<!-- 收货地址 -->
+<div class="orders-info-address">
+    <h1></h1>
+    <h2></h2>
+</div>
+<div class="order-info-content">
+    <div class="order-info-fee">
+        <h1 id="ci">优惠券：未使用</h1>
+        <h1 id="integral">积分抵扣：0积分抵扣￥0.00</h1>
+        <h1 id="ship">运费：￥0.00</h1>
+        <h2 id="total">实付款(含运费)：￥0.00</h2>
+    </div>
+    <div class="order-info-customer">
+        <span class="custom-service" onclick="redirect('customer_hx.html')">联系客服</span>
+        <span class="customer-service" style="display: none;" data-url="customer_service.html" onclick="redirect($(this).attr('data-url'))">申请售后</span>
+    </div>
+</div>
+<div class="order-info-log">
+    <!--<h1>订单编号：<em id="copy_txt">2017050978273923</em> <span id="copy_btn">复制单号</span></h1>-->
+</div>
+<div style="height: 1rem;"></div>
+<div class="order_foot" id="order_info_foot">
+    <!--<span class="order_red_btn">去评价</span>
+    <span class="order_btn" onclick="redirect('check_send_no.html')">查看物流</span>
+    <span class="order_btn">删除订单</span>-->
+</div>
+<script type="text/javascript" src="js/orderAction.1.0.js"></script>
+<script type="text/javascript">
+    var param = get_param();
+    var order_id = parseInt(param.id);
+    getThisData();
+    function getThisData() {
+        if (!checkLogin(false)) {
+            return false;
+        }
+        //加载订单信息
+        requestData('order_view.htm', {id: order_id}, function (data) {
+            if (!data.success) {
+                show_alert_back(data.msg);
+            }
+            setOrderInfoData(data.data);
+        });
+    }
+</script>
+
+</body>
+</html>

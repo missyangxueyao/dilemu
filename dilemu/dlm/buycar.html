@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
+          name="viewport">
+    <link rel="stylesheet" href="dilemu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dilemu/css/reset.css">
+    <link rel="stylesheet" href="dilemu/css/public.css">
+    <link rel="stylesheet" href="dilemu/css/buycar.css">
+    <script src="dilemu/js/jquery-1.8.3.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body style="background: #F4F4F4;">
+<div class="header">
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">购物车</div>
+    <div class="head-right"></div>
+</div>
+<div class="head"></div>
+<div class="productList-box"></div>
+<p style="padding-top: 1rem"></p>
+<div class="footer">
+    <label class="allchose">
+        <i class="check"></i>
+        <input type="checkbox" class="hidden">
+    </label>
+    <div id="chose_all" class="allchose-text">全选</div>
+    <div class="total">
+        <span class="total-text">合计: </span>
+        <span class="price"> ￥0.00</span>
+        <input type="button" value="结算" onclick="settlement();">
+    </div>
+</div>
+<script>
+    var cartIds = '';
+    getThisData();
+    function getThisData() {
+        if (!checkLogin(false)) {
+            return false;
+        }
+        requestData("goods_cart.htm", {}, function (data) {
+            if (data.data == null) {
+                show_alert(data.msg);
+                return false;
+            }
+            allchk();
+            var result = data.data;
+            for (var n in result) {
+                var goodslist = '<div class="productList"><label class="checkbox_label" data-price="' + result[n].price + '" data-num="' + result[n].count + '" data-id="' + result[n].id + '"><i class="check"></i><input type="checkbox" value="1" name="agree" class="hidden"></label><img onclick="redirect(\'goodsdetail.html?id=' + result[n].goods.id + '\')" src="' + imgurl + result[n].goods.mainPhotoPath + '" onerror="this.src=\'images/none-image.png\'" class="productList-img">' + (result[n].deleteStatus ? '<span>已下架</span>' : (result[n].cart_type == 'combin' ? '<span>组合商品</span>' : '')) + '<div class="productList-detail"><p><span onclick="redirect(\'goodsdetail.html?id=' + result[n].goods.id + '\')">' + result[n].goods.goods_name + '</span><span class="delete" onclick="deleteCart(' + result[n].id + ', this)"></span></p><div class="productList-bottom"><div class="colorDanjia"><span class="color">' + result[n].spec_info + '</span></div><em class="danjia">￥' + formatPrice(result[n].price) + '</em><div class="noems-numCz"><div class="sign">-</div><input type="number" data-carid="' + result[n].id + '" value="' + result[n].count + '" readonly class="czNum"><div class="add">+</div></div></div></div></div>'
+                $(".productList-box").append(goodslist)
+            }
+            checkbox();
+            num()
+            $(".allchose i").click();
+        }, true);
+        checkall();
+    }
+
+    function checkall() {
+        var agree = $(".allchose").children("input");
+        if (agree.attr("checked")) {
+            $(".allchose").children("i").addClass("checked");
+        } else {
+            $(".allchose").children("i").removeClass("checked");
+        }
+    }
+    //设置单个全部选中，全选框自动选中
+    $(".checkbox_label:checkbox").click(function () {
+        allchk();
+        checkall();
+    });
+    function allchk() {
+        var chknum = $(".checkbox_label :checkbox").size();//选项总个数
+        var chk = 0;
+        $(".checkbox_label :checkbox").each(function () {
+            if ($(this).prop("checked") == true) {
+                chk++;
+            }
+        });
+        if (chknum == chk) {//全选
+            $(".allchose").find('input').prop("checked", true);
+        } else {//不全选
+            $(".allchose").find('input').prop("checked", false);
+        }
+    }
+    function checkbox() {
+        $(".checkbox_label").click(function () {
+            var obj = $(this);
+            if (obj.children("input").attr("checked")) {
+                obj.children("i").addClass("checked");
+            } else {
+                obj.children("i").removeClass("checked");
+            }
+            allchk();
+            checkall();
+            setAllPrice();
+        });
+    }
+
+    //        全选
+    $(".allchose .check").click(function () {
+        var obj = $(this);
+        var object = obj.siblings('input');
+        if (object.prop("checked")) {
+            obj.addClass("checked");
+        } else {
+            obj.removeClass("checked");
+        }
+        if (object.prop("checked")) {
+            $(".checkbox_label :checkbox").prop("checked", true);
+            $(".checkbox_label").children("i").addClass("checked");
+
+        } else {
+            $(".checkbox_label :checkbox").prop("checked", false);
+            $(".checkbox_label").children("i").removeClass("checked");
+
+        }
+        setAllPrice();
+    });
+
+    function num() {
+        //        商品数量加减
+        $('.add').click(function () {
+            var num = $(this).parent().find(".czNum")
+            setCartNum(parseInt(num.val()) + 1, num);
+        })
+        $('.sign').click(function () {
+            var num = $(this).parent().find(".czNum");
+            if (num.val() > 1) {
+                setCartNum(parseInt(num.val()) - 1, num);
+            }
+        })
+//        删除商品
+        /*$(".delete").click(function () {
+            $(this).parent().parent().parent().css('display', 'none')
+        })*/
+    }
+
+    function setCartNum(num, obj) {
+        var cart_id = obj.attr("data-carid");
+        requestData('goods_count_adjust.htm', {cart_id: cart_id, count: num}, function (data) {
+            if (data.success) {
+                obj.val(num);
+                obj.parents(".productList-detail").siblings(".checkbox_label").attr("data-num", num);
+                setAllPrice();
+            } else {
+                show_alert(data.msg);
+            }
+        });
+    }
+
+    /**
+     * 计算总价格
+     */
+    function setAllPrice() {
+        var price = 0;
+        cartIds = '';
+        $(".checkbox_label").each(function () {
+            var obj = $(this);
+            if (obj.find("input").prop("checked")) {
+                price += parseFloat(obj.attr("data-price")) * parseInt(obj.attr("data-num"));
+                cartIds += "," + obj.attr("data-id");
+            }
+        });
+        $(".price").text("￥" + formatPrice(price));
+    }
+
+    function deleteCart(id, obj) {
+        obj = $(obj);
+        requestData('remove_goods_cart.htm', {id: id}, function (data) {
+            if (!data.success) {
+                show_alert(data.msg);
+                return false;
+            }
+            show_alert("删除成功");
+            obj.parent().parent().parent().remove();
+            setAllPrice();
+        })
+    }
+    
+    function settlement() {
+        if (!isWeiXin()) {
+            return false;
+        }
+        if (cartIds == "") {
+            show_alert("请选择结算商品");
+            return false;
+        }
+        redirect("jiesuan.html?carId=" + cartIds.substr(1));
+    }
+
+    /*$(".total").find('input').click(function(){
+     show_alert('','','jiesuan.html')
+     $(".alert_dialog").css('display','none')
+     })*/
+</script>
+</body>
+</html>

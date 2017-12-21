@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>迪乐姆</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">我的团购</div>
+    <div class="head-right"></div>
+</header>
+<div class="head" style="height: 1.5rem;"></div>
+<div class="order_head">
+    <em style="width: 0.16rem;"></em>
+    <span class="checked">全部</span>
+    <em style="width: 0.32rem;"></em>
+    <span>待成团</span>
+    <em style="width: 0.32rem;"></em>
+    <span>已成团</span>
+    <em style="width: 0.32rem;"></em>
+    <span>拼团失败</span>
+</div>
+<div class="order_list">
+    <!-- 一个订单 -->
+    <div class="order_body">
+        <div class="order_title">订单号：28374928997192 <em>拼团成功</em></div>
+        <div class="order_goods">
+            <img src="images/buy_limit/goods@2x.png" alt=""/>
+            <div class="order_goods_right">
+                <h1>迪乐姆 创意 手工制作听话的薯片筒86s迪乐姆 创意 手工制作听话的薯片筒86s</h1>
+                <h2>颜色：红色</h2>
+                <h3><em>￥18.00</em>x2</h3>
+            </div>
+        </div>
+        <div class="order_foot">
+            <h1>共两件商品 &nbsp; 合计：￥47.00（含运费￥5.00）</h1>
+            <span class="order_btn" onclick="redirect('group_buy_info.html');">查看详情</span>
+        </div>
+    </div>
+    <!-- 一个订单 -->
+    <div class="order_body">
+        <div class="order_title">订单号：28374928997192 <em>待成团</em></div>
+        <div class="order_goods">
+            <img src="images/buy_limit/goods@2x.png" alt=""/>
+            <div class="order_goods_right">
+                <h1>迪乐姆 创意 手工制作听话的薯片筒86s迪乐姆 创意 手工制作听话的薯片筒86s</h1>
+                <h2>颜色：红色</h2>
+                <h3><em>￥18.00</em>x2</h3>
+            </div>
+        </div>
+        <div class="order_foot">
+            <h1>共两件商品 &nbsp; 合计：￥47.00（含运费￥5.00）</h1>
+            <span class="order_red_btn">邀请好友</span>
+            <span class="order_btn" onclick="redirect('group_buy_info.html');">查看详情</span>
+        </div>
+    </div>
+    <!-- 一个订单 -->
+    <div class="order_body">
+        <div class="order_title">订单号：28374928997192 <em>拼团失败</em></div>
+        <div class="order_goods">
+            <img src="images/buy_limit/goods@2x.png" alt=""/>
+            <div class="order_goods_right">
+                <h1>迪乐姆 创意 手工制作听话的薯片筒86s迪乐姆 创意 手工制作听话的薯片筒86s</h1>
+                <h2>颜色：红色</h2>
+                <h3><em>￥18.00</em>x2</h3>
+            </div>
+        </div>
+        <div class="order_foot">
+            <h1>共两件商品 &nbsp; 合计：￥47.00（含运费￥5.00）</h1>
+            <span class="order_btn" onclick="redirect('group_buy_info.html');">查看详情</span>
+            <span class="order_btn">删除订单</span>
+        </div>
+    </div>
+</div>
+<!--<div id="none_order" class="group_buy">您暂时还没有团购</div>-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".order_head > span").click(function () {
+            changeStatus(this);
+        });
+    });
+    function changeStatus(obj) {
+        obj = $(obj);
+        if (obj.hasClass("checked")) {
+            return false;
+        }
+        obj.addClass("checked").siblings("span").removeClass("checked");
+    }
+</script>
+</body>
+</html>

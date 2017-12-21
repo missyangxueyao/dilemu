@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="dilemu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dilemu/css/reset.css">
+    <link rel="stylesheet" href="dilemu/css/public.css">
+    <link rel="stylesheet" href="dilemu/css/seach.css">
+    <link rel="stylesheet" href="dilemu/css/list.css">
+    <script src="dilemu/js/jquery-1.8.3.min.js"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+</head>
+<style>
+    .header{
+        padding-bottom: 0.652rem;
+    }
+</style>
+<body style="background: #ffffff;">
+<div class="header">
+    <form method="get" action="seachProducts.html" onsubmit="return false;">
+        <input type="search" style="width: 5.034rem;" onkeyup="searchProduct(this.value);" placeholder="输入商品名称" class="seachHeader-box" name="keyword">
+    </form>
+    <span></span>
+    <div class="seachHeader-remove">
+        <a href="javascript:void(0)" onclick="history.go(-2);">取消</a>
+    </div>
+</div>
+<div class="head"></div>
+<!--搜索到商品的情况-->
+<div class="container sameproduct-List">
+    <ul class="row">
+    </ul>
+</div>
+<div class="load_more" id="load_more"></div>
+<!--没有搜索到商品的情况-->
+<div class="seach-noproduct">
+    抱歉，没有找到相应的商品
+</div>
+</body>
+<script>
+    var pageNumber = 1;
+    var totalPage = 1;
+    var bodyHeight = document.body.clientHeight;
+    var listHeight = 0;
+    var param = get_param();
+    var keyword = param.keyword;
+    var isLoading = false;//滚动时不允许加载
+    function requestOrder(page) {
+        page = page ? page : 1;
+        var obj = $(".row");
+        var html = '';
+        requestData("search.htm", {keyword:keyword, currentPage: page, pageSize: 12}, function (data) {
+            if(data.success == true){
+                $(".seach-noproduct").css('display','none');
+                var result = data.data;
+                totalPage = data.data.totalPage;
+                for(i in result.recordList) {
+                    html += '<li class="col-xs-6 column">' +
+                            '<a href="goodsdetail.html?id=' + result.recordList[i].id + '">' +
+                            '<img src="' + imgurl + result.recordList[i].mainPhotoPath + '" onerror="this.src=\'images/none-image.png \'">' +
+                            '<h1>' + result.recordList[i].goods_name + '</h1>' +
+                            '<p><span>￥ </span> ' + result.recordList[i].goods_price + '</p>' +
+                            '</a></li>'
+                }
+                if (page == 1) {
+                    obj.html("");
+                    obj.html(html);
+                } else {
+                    obj.append(html);
+                }
+                listHeight = document.getElementById("load_more").offsetTop;
+                isLoading = false;
+            }else{
+                obj.html("");
+                $(".seach-noproduct").css('display','block')
+            }
+
+        });
+    }
+    $("input[name='keyword']").val(keyword);
+    $(window).scroll(function () {
+        if (totalPage <= pageNumber) {
+            return false;
+        }
+        if (isLoading) {
+            return false;
+        }
+        var wScrollY = window.scrollY;
+        if (wScrollY >= listHeight - bodyHeight - 20) {
+            isLoading = true;
+            requestOrder(++pageNumber);
+        }
+    });
+    requestOrder(1);
+    $(".header").click(function(){
+        $(".header").find('input').val(" ").focus()
+    })
+    
+    function searchProduct(value) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 13 && value != '') {
+            pageNumber = 1;
+            keyword = value;
+            requestOrder(pageNumber);
+        }
+    }
+</script>
+</html>

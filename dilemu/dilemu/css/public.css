@@ -1,0 +1,83 @@
+/*信息提交状态提示框*/
+.alert_dialog{
+    position:fixed;
+    width:6.4rem;
+    height:100%;
+    background:transparent;
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    top:0;
+    z-index:11;
+}
+.show_alert{
+    display:inline-block;
+    padding:0.2rem 0.3rem;
+    max-width:5rem;
+    font-size:0.256rem;
+    line-height:0.4rem;
+    color:#fff;
+    /*background: #ffffff;*/
+    color: #e3676d;
+    border-radius:0.06rem;
+    text-align:left;
+    margin-top:4.5rem;
+    z-index:3;
+}
+
+
+.show_alert img{
+    width:2.04rem;
+    height:1.275rem;
+}
+body{
+    width:6.4rem;
+    /*max-width:7.5rem;*/
+    color: #333333;
+}
+.fanhui,.kong{
+    width:1rem;
+}
+.header,header{
+    height:0.8rem;
+    width:100%;
+    background: #feabb5;
+    color: #ffffff;
+    text-align: center;
+    line-height:0.8rem;
+    font-size: 0.3rem;
+    clear: both;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    z-index: 9999;
+}
+.header-left{
+    width:1rem;
+    float: left;
+}
+.header-right{
+    width:1rem;
+    float: right;
+}
+.header-center{
+    width:4.4rem;
+    float: left;
+}
+.header-fenge{
+    padding:0.4rem 0;
+}
+.sharebtn{
+    width:0.391rem;
+    height:0.391rem;
+    background:url("../img/share.png") no-repeat;
+    background-size:100%;
+    position: absolute;
+    top:0.1rem;
+    right:0.256rem;
+    z-index:9;
+}
+
+.header-gaback{
+    background: url("../img/nav_banck_arrow@2x.png") no-repeat center;
+    background-size:0.25rem 0.40rem;
+}

@@ -1,0 +1,66 @@
+<!-- 我的订单页面 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--<script type="text/javascript" src="js/zclip/jquery.zclip.js"></script>-->
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">退款退货详情</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<!-- 收货地址 -->
+<div class="orders-info-address">
+    <h1></h1>
+    <h2></h2>
+</div>
+<div class="order-info-content">
+    <div class="order-info-fee">
+        <h1 id="ci">优惠券：未使用</h1>
+        <h1 id="integral">积分抵扣：0积分抵扣￥0.00</h1>
+        <h1 id="ship">运费：￥0.00</h1>
+        <h2 id="total">实付款(含运费)：￥0.00</h2>
+    </div>
+</div>
+<div class="base-content">
+    <div class="returns-list">货物状态 <em id="goodsStatus"></em></div>
+    <div class="returns-list">退款原因 <em id="returnRe"></em></div>
+    <div class="returns-list">申请退款金额 <em style="color: #E0696D" id="returnMoney">￥0.00</em></div>
+    <div class="returns-list">退款说明 <em id="returnAss"></em></div>
+    <div class="order-refund-update">
+        <span style="color: #787878;">凭证图片</span>
+
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="order-info-log">
+    <!--<h1>订单编号：<em id="copy_txt">2017050978273923</em> &lt;!&ndash;<span id="copy_btn">复制单号</span>&ndash;&gt;</h1>
+    <h2>创建时间：2017.05.09 12:23:45</h2>
+    <h2>付款时间：2017.05.10 12:23:45</h2>
+    <h2>发货时间：2017.05.11 12:23:45</h2>
+    <h2>签收时间：2017.05.12 12:23:45</h2>
+    <h2>申请时间：2017.05.13 12:23:45</h2>-->
+</div>
+<div style="height: 1rem;"></div>
+<div class="order_foot" id="order_info_foot" style="color: #E0696D; text-align: center; line-height: 0.35rem;">
+    <!--退款申请中，请耐心等待-->
+    <span style="float: none; width: 2rem; display: none;" class="order_red_btn" id="bottom" data-url="set_send_info.html" onclick="redirect(this.attr('data-url'))">填写物流信息</span>
+</div>
+<script type="text/javascript" src="js/orderAction.1.0.js"></script>
+<script type="text/javascript" src="js/return_info.js"></script>
+</body>
+</html>

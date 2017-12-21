@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/buycar.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<style>
+    .hidden{
+        /*display: block !important;*/
+    }
+</style>
+<body>
+    <div class="header">
+        购物车
+    </div>
+    <p class="header-fenge"></p>
+    <div class="productList">
+        <label class="checkbox_label">
+            <i class="check"></i>
+            <input type="checkbox" value="1" name="agree" class="hidden">
+        </label>
+        <div class="productList-img">
+            <img src="img/buycar6.png" alt="">
+        </div>
+        <div class="productList-detail">
+            <p>
+                <span>迪乐姆 创意梦幻水晶星星</span>
+                <span class="delete"></span>
+            </p>
+            <div class="productList-bottom">
+                <div class="colorDanjia">
+                    <span class="color">颜色：红色</span>
+                    <input class="danjia" value="￥18.00">
+                </div>
+                <div class="noems-numCz">
+                    <div class="sign">-</div>
+                    <input type="number" value="1" readonly class="czNum">
+                    <div class="add">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="productList">
+        <label class="checkbox_label">
+            <i class="check"></i>
+            <input type="checkbox" value="1" name="agree" class="hidden">
+        </label>
+        <div class="productList-img">
+            <img src="img/buycar8.png" alt="">
+        </div>
+        <div class="productList-detail">
+            <p>
+                <span>听话的薯片筒86s</span>
+                <span class="delete"></span>
+            </p>
+            <div class="productList-bottom">
+                <div class="colorDanjia">
+                    <span class="color">颜色：红色</span>
+                    <input class="danjia" value="￥18.00">
+                </div>
+                <div class="noems-numCz">
+                    <div class="sign">-</div>
+                    <input type="number" value="1" readonly class="czNum">
+                    <div class="add">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="productList">
+        <label class="checkbox_label">
+            <i class="check"></i>
+            <input type="checkbox" value="1" name="agree" class="hidden">
+        </label>
+        <div class="productList-img">
+            <img src="img/buycar10.png" alt="">
+        </div>
+        <div class="productList-detail">
+            <p>
+                <span>打不倒的船长102</span>
+                <span class="delete"></span>
+            </p>
+            <div class="productList-bottom">
+                <div class="colorDanjia">
+                    <span class="color">颜色：红色</span>
+                    <input class="danjia" value="￥18.00">
+                </div>
+                <div class="noems-numCz">
+                    <div class="sign">-</div>
+                    <input type="number" value="1" readonly class="czNum">
+                    <div class="add">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="productList">
+        <label class="checkbox_label">
+            <i class="check"></i>
+            <input type="checkbox" value="1" name="agree" class="hidden">
+        </label>
+        <div class="productList-img">
+            <img src="img/buycar12.png" alt="">
+        </div>
+        <div class="productList-detail">
+            <p>
+                <span>果冻蜡烛69s</span>
+                <span class="delete"></span>
+            </p>
+            <div class="productList-bottom">
+                <div class="colorDanjia">
+                    <span class="color">颜色：红色</span>
+                    <input class="danjia" value="￥18.00">
+                </div>
+                <div class="noems-numCz">
+                    <div class="sign">-</div>
+                    <input type="number" value="1" readonly class="czNum">
+                    <div class="add">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="padding-top: 1rem"></p>
+    <div class="footer">
+        <label class="allchose">
+            <i class="check"></i>
+            <input type="checkbox" value="1"  class="hidden">
+        </label>
+        <div class="allchose-text">全选</div>
+        <div class="total">
+            <span class="total-text">合计: </span>
+            <span class="price"> ￥37.00</span>
+            <input type="button" value="结算">
+        </div>
+    </div>
+    <script>
+        function checkall() {
+            var agree = $(".allchose").children("input");
+            if(agree.attr("checked")){
+                $(".allchose").children("i").addClass("checked");
+            }else{
+                $(".allchose").children("i").removeClass("checked");
+            }
+
+        }
+        $(".checkbox_label").click(function(){
+            var obj = $(this);
+            if(obj.children("input").attr("checked")){
+                obj.children("i").addClass("checked");
+            }else{
+                obj.children("i").removeClass("checked");
+            }
+            allchk();
+            checkall()
+        });
+//        商品数量加减
+        $('.add').click(function(){
+            var num = $(this).parent().find(".czNum")
+            num.val(parseInt(num.val())+1);
+        })
+        $('.sign').click(function(){
+            var num = $(this).parent().find(".czNum");
+            if(num.val()>1){
+                num.val(parseInt(num.val())-1);
+            }
+        })
+//        删除商品
+        $(".delete").click(function(){
+            $(this).parent().parent().parent().css('display','none')
+        })
+//        全选
+    $(".allchose").click(function(){
+        var obj = $(this);
+        if(obj.children("input").attr("checked")){
+            obj.children("i").addClass("checked");
+        }else{
+            obj.children("i").removeClass("checked");
+        }
+    });
+
+    $(".allchose").find('input').click(function(){
+//        check()
+        if(this.checked){
+            $(".checkbox_label :checkbox").prop("checked", true);
+            $(".checkbox_label").children("i").addClass("checked");
+
+        }else{
+            $(".checkbox_label :checkbox").prop("checked", false);
+            $(".checkbox_label").children("i").removeClass("checked");
+
+        }
+    });
+
+//设置单个全部选中，全选框自动选中
+$(".checkbox_label :checkbox").click(function(){
+    allchk();
+    checkall();
+});
+    function allchk(){
+        var chknum = $(".checkbox_label :checkbox").size();//选项总个数
+        var chk = 0;
+        $(".checkbox_label :checkbox").each(function () {
+            if($(this).prop("checked")==true){
+                chk++;
+            }
+        });
+        if(chknum==chk){//全选
+            $(".allchose").find('input').prop("checked",true);
+        }else{//不全选
+            $(".allchose").find('input').prop("checked",false);
+        }
+    }
+    $(".total").find('input').click(function(){
+        show_alert('','','jiesuan.html')
+        $(".alert_dialog").css('display','none')
+    })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c610e19a-64f4-4c65-b00c-1151c472b8b3" name="dlm" url="http://shop.delightmom.com/dilemu">
+        <fileTransfer host="106.14.241.124" port="22" rootFolder="/usr/local/apache-tomcat-8.0.45/webapps/dilemu" accessType="SFTP" password="dfe2dfcbdfd8dfd9dfc5dfc7df98df9adf9bdf9ddff9dfc2dfc5dfdadffadfd8dfc5dfcedfdfdfc9dfdedf8b" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

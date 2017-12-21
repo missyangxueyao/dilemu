@@ -1,0 +1,588 @@
+body{
+    position: relative;
+}
+.top-banner img{
+    width:100%;
+    height:4.82rem;
+}
+.text-detail{
+    border-bottom:0.1rem solid #dadada;
+    padding:0 0.2rem;
+}
+.text-detail h1{
+    font-size: 0.3rem;
+    height:0.6rem;
+    line-height:0.6rem;
+}
+.text-detail p{
+    color: #ef767d;
+    font-size: 0.25rem;
+    line-height:0.6rem;
+    height:0.6rem;
+}
+.text-detail span{
+    display: block;
+    color: #999999;
+    font-size: 0.2rem;
+    line-height:0.4rem;
+    padding-bottom:0.2rem;
+}
+/*.pinpai{*/
+    /*border-bottom:0.1rem solid #EEEEEE;*/
+    /*padding:0 0.2rem;*/
+    /*overflow: hidden;*/
+    /*clear: both;*/
+/*}*/
+/*.pinpai-logo{*/
+    /*float: left;*/
+    /*height:1.6rem;*/
+    /*width:1.8rem;*/
+/*}*/
+/*.pinpai-logo span{*/
+    /*display: block;*/
+    /*margin-top:0.45rem;*/
+    /*border:0.01rem solid #EEEEEE;*/
+    /*background: url("../img/goodspp.png") no-repeat center left;*/
+    /*background-size: 100%;*/
+    /*height:0.9rem;*/
+    /*width:1.8rem;*/
+/*}*/
+/*.pinpai-title{*/
+    /*float: left;*/
+    /*padding:0.4rem 0.2rem;*/
+/*}*/
+/*.pinpai-title h1{*/
+    /*font-size: 0.3rem;*/
+    /*height:0.6rem;*/
+    /*line-height:0.6rem;*/
+/*}*/
+/*.pinpai-title p{*/
+    /*color: #999999;*/
+    /*font-size: 0.2rem;*/
+    /*line-height:0.4rem;*/
+/*}*/
+/*.pinpai-look {*/
+    /*float: right;*/
+    /*padding:0.64rem 0;*/
+/*}*/
+/*.pinpai-look a{*/
+    /*display: block;*/
+    /*color: #ef767d;*/
+    /*font-size:0.3rem;*/
+    /*border:1px solid #ef767d;*/
+    /*border-radius: 3px;*/
+    /*line-height:0.52rem;*/
+    /*padding:0 0.28rem;*/
+/*}*/
+/*产品套餐*/
+.hidden{
+    display: none;
+}
+.ProductPackage{
+    overflow: hidden;
+    border-bottom:0.1rem solid #dadada;
+}
+.package-title{
+    padding-left:0.2rem;
+    height:0.8rem;
+    border-bottom: 1px solid #dadada;
+}
+.package-title h1{
+    float: left;
+    font-size: 0.3rem;
+    line-height:0.8rem;
+}
+.package-title P{
+    float: left;
+    color: #ef767d;
+    line-height:0.8rem;
+    font-size:0.25rem;
+    margin-left:2rem;
+}
+.package-title p span{
+    color: #999999;
+}
+.check{
+    background: url("../img/check.png") no-repeat;
+    background-size: 100%;
+}
+.checked{
+    background: url("../img/checked.png") no-repeat;
+    background-size: 100%;
+}
+.checkbox_label{
+    padding:0.2rem 0.2rem 0 0.2rem;
+    float: right;
+}
+.checkbox_label i{
+    display: block;
+    height:0.3rem;
+    width:0.3rem;
+}
+.package-img{
+    overflow: hidden;
+    padding:0 0.256rem;
+    /*border-bottom:0.1rem solid #EEEEEE;*/
+    margin-top:0.166rem;
+}
+.package-img span{
+    display:block;
+    width:0.717rem;
+    height:1.02rem;
+    float: left;
+    background: url("../img/add.png") no-repeat center;
+    background-size: 0.205rem;
+
+}
+.package-img ul{
+    float: left;
+}
+.package-img li{
+    text-align: center;
+    line-height:0.4rem;
+    font-size:0.221rem;
+}
+.package-img li img{
+    width:1.442rem;
+    height:1.02rem;
+    padding:0 0.221rem;
+}
+
+/*相似产品*/
+.sameProduct{
+    overflow: hidden;
+    border-bottom:0.1rem solid #dadada;
+}
+
+
+.sameProduct-title{
+    padding-left:0.2rem;
+    height:0.8rem;
+    border-bottom: 1px solid #dadada;
+}
+.sameProduct-title h1{
+    font-size: 0.3rem;
+    line-height:0.8rem;
+}
+.swiper-youer{
+    padding-left:0.2rem;
+
+}
+.swiper-goods{
+    margin-top:0.2rem;
+}
+.swiper-goods img{
+    display: block;
+    width:100%;
+    border-radius: 0.05rem;
+}
+.swiper-goods h1,.swiper-goods p{
+    text-align: center;
+    line-height:0.4rem;
+    font-size: 0.25rem;
+}
+.containerList ul li h1{
+    margin-top:0.1rem;
+}
+.swiper-goods{
+    width:2rem;
+
+}
+#new-container .swiper-slide{
+    height:4.82rem !important;
+}
+/*详情与评论*/
+.detailComment-nav{
+    height:0.8rem;
+    border-bottom:1px solid #dadada;
+}
+.detailComment-nav ul li{
+    float: left;
+    width:1.26rem;
+    margin:0 0.97rem;
+    /*text-align: center;*/
+    line-height:0.8rem;
+    font-size:0.3rem;
+    text-align: right;
+}
+.moren1{
+    background: url("../img/detail1.png") no-repeat;
+    background-position:left center;
+    background-size: 0.38rem 0.38rem;
+    color: #333333;
+}
+.red1{
+    background: url("../img/detail2.png") no-repeat;
+    background-position:left center;
+    background-size: 0.38rem 0.38rem;
+    color: #ef767d;
+    border-bottom: 0.02rem solid #ef767d;
+}
+.moren2{
+    background: url("../img/comment1.png") no-repeat;
+    background-position:left center;
+    background-size: 0.38rem 0.38rem;
+    color: #333333;
+}
+.red2{
+    background: url("../img/comment2.png") no-repeat;
+    background-position:left center;
+    background-size: 0.38rem 0.38rem;
+    border-bottom: 0.02rem solid #ef767d;
+    color: #ef767d;
+}
+.tabContent{
+    display: none;
+    
+}
+.detail-content img{
+    width:100%;
+}
+/*评论*/
+.comment-content{
+    /*overflow: hidden;*/
+}
+.comment-title{
+    height:0.8rem;
+    margin:0.3rem 0.24rem;
+    padding:0 0.3rem;
+    background: url("../img/plbj.png") no-repeat;
+    background-size:100% 0.8rem;
+    clear: both;
+    /*overflow: hidden;*/
+}
+.comment-title h1{
+    font-size: 0.3rem;
+    background: url("../img/mjkb.png") no-repeat left center;
+    background-size:0.38rem 0.38rem;
+    height:0.8rem;
+    line-height: 0.8rem;
+    float: left;
+    width:2.13rem;
+    padding-left:0.58rem;
+    padding-right:0.3rem;
+    color: #e3676d;
+}
+.star{
+    float: left;
+    height:0.8rem;
+    /*margin-left:1.3rem;*/
+    width:2.65rem;
+}
+.star img{
+    display: block;
+    float: left;
+    width:0.35rem;
+    height:0.35rem;
+    margin:0.225rem 0.09rem;
+
+}
+.comment-title span{
+    display:block;
+    float: right;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    color: #e3676d;
+}
+.comment-comment{
+    clear: both;
+    overflow: hidden;
+    padding:0 0.3rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 0.01rem solid #dadada;
+}
+.comment-commentTitle{
+    overflow: hidden;
+}
+.comment-commentTitle img{
+    display: block;
+    height:0.54rem;
+    width: 0.54rem;
+    border-radius: 100%;
+    float: left;
+    margin-right:0.3rem;
+}
+.comment-comment .comment-user{
+    display: block;
+    font-size: 0.3rem;
+    width:1.31rem;
+    float: left;
+    color: #333333;
+    line-height:0.54rem;
+}
+.comment-comment .comment-time{
+    float: right;
+    display: block;
+    color: #999999;
+    line-height:0.54rem;
+}
+.comment-commentText{
+    margin:0.2rem 0rem;
+    font-size: 0.3rem;
+    line-height:0.5rem;
+    color: #333333;
+}
+.comment-commentImg img{
+    float: left;
+    width:1.62rem;
+    height:1.62rem;
+    margin:0 0.18rem 0.3rem 0;
+}
+
+/*底部*/
+.footer{
+    width:100%;
+    height:0.8rem;
+    margin-top:0.05rem;
+    padding-left:0.13rem;
+    /*box-shadow:4px 4px 2px 4px rgba(1,1,0,0.1) ;*/
+    box-shadow: 0 2px 5px #999999;
+    position: fixed;
+    bottom:0;
+    background: #ffffff;
+    z-index: 9;
+}
+.footer-function ul li{
+    float: left;
+    color: #999999;
+    padding:0.45rem 0.17rem 0;
+    line-height:0.3rem;
+    font-size:0.187rem;
+}
+.footer-function ul li:nth-child(1){
+    background: url("../img/3.png") no-repeat;
+    background-position:center 0.1rem;
+    background-size: 0.29rem 0.29rem;
+}
+.footer-function ul li:nth-child(2){
+    background: url("../img/1.png") no-repeat;
+    background-position:center 0.1rem;
+    background-size: 0.29rem 0.29rem;
+}
+.footer-function ul li:nth-child(3){
+    background: url("../img/2.png") no-repeat;
+    background-position:center 0.1rem;
+    background-size: 0.29rem 0.29rem;
+}
+.footer input{
+    display: block;
+    line-height:0.8rem;
+    height:100%;
+    width:1.78rem;
+    border:none;
+    color: #ffffff;
+    font-size: 0.26rem;
+    text-align: center;
+    float: right;
+    outline: none;
+}
+.addcar{
+    background: #fc96a1;
+}
+.gobuy{
+    background: #5bc3e8;
+}
+
+/*产品规格选择*/
+.norms{
+    width:100%;
+    display: none;
+    background: #ffffff;
+    position: absolute;
+    bottom:0;
+    z-index: 99;
+}
+.norms .norms-goods{
+    height:1.7rem;
+    clear: both;
+    overflow: hidden;
+    margin:0 0.25rem;
+
+}
+.norms-goods img{
+    margin-top:0.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    float: left;
+}
+.norms-goodsText{
+    float: left;
+    margin-left:0.2rem;
+}
+.norms-goodsText h1{
+    font-size:0.26rem;
+    line-height:0.6rem;
+    color: #333333;
+}
+.norms-goodsText span{
+    display: block;
+    text-align: left;
+    color: #ef767d;
+    font-size:0.26rem;
+    line-height:0.6rem;
+}
+.norms-color,.norms-num{
+    margin:0.2rem 0.25rem;
+    clear: both;
+    overflow: hidden;
+}
+.norms-colorText,.norms-numText{
+    float: left;
+    font-size: 0.26rem;
+    color: #333333;
+    padding-right:0.2rem;
+    line-height:0.52rem;
+    margin-top:0.1rem;
+}
+.norms-colorList{
+    float: left;
+    width:4.8rem;
+}
+.norms-colorList ul li{
+    float: left;
+    border: #dadada solid 1px;
+    border-radius: 6px;
+    color: #999999;
+    font-size:0.26rem;
+    width:1rem;
+    text-align: center;
+    line-height:0.52rem;
+    margin:0.1rem;
+}
+.noems-numCz{
+    float: right;
+    width:2.2rem;
+}
+.sign,.add{
+    width:0.59rem;
+    height:0.56rem;
+    line-height:0.56rem;
+    text-align: center;
+    font-size:0.26rem;
+}
+.sign{
+    background: url("../img/normsl.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.add{
+    background: url("../img/normsr.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.czNum{
+    display: block;
+    outline:none;
+    border:none;
+    width:0.9rem;
+    height:0.56rem;
+    background: url("../img/normsc.png") no-repeat;
+    background-size:100%;
+    float: left;
+    margin:0 0.02rem;
+    line-height:0.56rem;
+    text-align: center;
+    font-size:0.26rem;
+}
+.norms-btn{
+    clear: both;
+    overflow: hidden;
+}
+.norms-btn input{
+    display: block;
+    float: left;
+    outline:none;
+    border:none;
+    width:50%;
+    height:1rem;
+    text-align: center;
+    color: #ffffff;
+    line-height:1rem;
+    font-size:0.26rem;
+}
+.norms-btn .norms-addcar{
+    background: #fc96a1;
+}
+.norms-btn .norms-gobuy{
+    background: #5bc3e8;
+}
+.mc,.share-mc{
+    display: none;
+    position:fixed;
+    width:6.4rem;
+    height:100%;
+    background:transparent;
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    top:0;
+    z-index:11;
+}
+.close{
+    width:0.3rem;
+    height:0.3rem;
+    background: url("../img/close.png") no-repeat;
+    background-size:100%;
+    position: absolute;
+    z-index: 999;
+    top:0.2rem;
+    right:0.2rem;
+    opacity: 1;
+}
+
+.share{
+    width:100%;
+    display: none;
+    background: #ffffff;
+    position: absolute;
+    bottom:0;
+    z-index: 66;
+}
+
+.share h1{
+    text-align: center;
+    font-size: 0.256rem;
+    line-height:0.765rem;
+    margin-top:0.085rem;
+}
+.share-way{
+    width:100%;
+    text-align: center;
+    margin-bottom:1.02rem;
+}
+.share-way li{
+    display: inline-block;
+}
+.share-way li h2{
+    font-size:0.221rem;
+    color: #999999;
+    line-height:0.478rem;
+}
+.share-way span{
+    display:inline-block;
+    width:1.04rem;
+    height:1.04rem;
+    background: #f2f2f2;
+    margin:0 0.17rem;
+    border-radius: 100%;
+}
+.share .close{
+    position: absolute;
+    top:2.8rem;
+    left:3.05rem;
+}
+.share-way li:nth-child(1) span{
+    background: #f2f2f2 url("../img/shareway3.png") no-repeat center;
+    background-size: 0.8rem;
+}
+.share-way li:nth-child(2) span{
+    background: #f2f2f2 url("../img/shareway1.png") no-repeat center;
+    background-size: 0.8rem;
+}
+.share-way li:nth-child(3) span{
+    background: #f2f2f2 url("../img/shareway2.png") no-repeat center;
+    background-size: 0.8rem;
+}
+.share-way li:nth-child(4) span{
+    background: #f2f2f2 url("../img/shareway4.png") no-repeat center;
+    background-size: 0.8rem;
+}

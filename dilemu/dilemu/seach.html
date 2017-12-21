@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/seach.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <input type="text" placeholder="输入商品名称" class="seachHeader-box">
+        <!--<span></span>-->
+        <div class="seachHeader-remove">
+            <a href="">取消</a>
+        </div>
+    </div>
+    <!--<p class="header-fenge"></p>-->
+    <div class="hotseach">
+        <h1>热门搜索</h1>
+        <ul class="hotseach-box">
+            <li class="hotseach-active">玩具</li>
+            <li>积木</li>
+            <li>飞机</li>
+            <li>乐迪</li>
+            <li>篮球</li>
+            <li>跑车</li>
+            <li>遥控</li>
+        </ul>
+    </div>
+    <div class="nearseach">
+        <h1>最近搜索</h1>
+        <ul class="nearseach-box">
+            <li>玩具</li>
+            <li>超级飞侠乐迪</li>
+            <li>多功能积木</li>
+            <li>遥控汽车</li>
+            <li>星星纽扣</li>
+            <li>果冻蜡烛</li>
+        </ul>
+        <span class="nearseach-remove">清除搜索记录</span>
+    </div>
+</body>
+<script>
+    $(".hotseach-box").find('li').addClass('hotseach-moren')
+    $(".hotseach-box").find('li').click(function(){
+        $(this).addClass('hotseach-active').removeClass('hotseach-moren').siblings().removeClass('hotseach-active').addClass('hotseach-moren')
+    })
+    $(".nearseach-remove").click(function(){
+        $(".nearseach").css('display','none')
+    })
+ </script>
+</html>

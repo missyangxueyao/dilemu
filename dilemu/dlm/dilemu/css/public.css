@@ -1,0 +1,107 @@
+/*信息提交状态提示框*/
+html,body{height: 100%;}
+input[type="search"]{-webkit-appearance:none;}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+/*input[type="search"]{-webkit-appearance:none;}*/
+
+
+
+.alert_dialog{
+    position:fixed;
+    width:6.4rem;
+    height:100%;
+    background:transparent;
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    top:0;
+    z-index:11;
+}
+.show_alert{
+    display:inline-block;
+    padding:0.2rem 0.3rem;
+    max-width:5rem;
+    font-size:0.256rem;
+    line-height:0.4rem;
+    /*color:#fff;*/
+    background: #ffffff;
+    color: #e3676d;
+    border-radius:0.06rem;
+    text-align:left;
+    margin-top:4.5rem;
+    z-index:3;
+}
+
+
+/*公共部分*/
+.clearfixd:after { content: '\20'; display: block; height: 0; clear: both; }
+.clearfixd { *zoom:1; overflow:hidden;}
+.hidden{display:none !important;}
+.nomarginleft{margin-left:0}
+.clear{clear:both !important;}
+.dialog{width:100%; height:100%; position:fixed; top:0; background:rgba(0,0,0,0.3); z-index:11;}
+/*.alert_dialog{position:fixed; width:6.4rem; height:100%; background-color:transparent; text-align:center; top:0; z-index:11;}*/
+/*.show_alert{display:inline-block; padding:0.15rem 0.3rem; max-width:5rem; font-size:0.22rem; line-height:0.4rem; color:#fff; background:rgba(0, 0, 0, 1); box-shadow: 0 0 0.01rem 0.01rem rgba(70, 70, 70, 0.7); border-radius:0.06rem; text-align:left; margin-top:4.5rem; z-index:3;transition:width 0.5s;}*/
+.alert_success{padding-top: 0.7rem; background-image: url("../../images/zh_07.png"); background-repeat: no-repeat; background-position: 50% 0.2rem; background-size:0.4rem;}
+.alert_error{padding-top: 0.7rem; background-image: url("../../images/zh_10.png"); background-repeat: no-repeat; background-position: 50% 0.2rem; background-size:0.4rem;}
+.load_more{background-color: transparent; color:#787878; font-size: 0.22rem; height: 0.15rem; text-align: center;}
+.display_block{display: block;}
+.btn{display: block; text-align: center; cursor: pointer;}
+.big-width-btn{width: 5.6rem; height: 0.7rem; display: block; margin: 0.2rem auto; background-color: rgb(23, 141, 228); color:#FFF; font-size: 0.26rem; line-height: 0.7rem; border-radius: 0.04rem;}
+.checkbox-icon{height: 0.3rem; width: 0.3rem; display: block; float: left; margin-right: 0.14rem; background: url("../../images/zh_19.png") no-repeat 50% 50%; background-size: 0.24rem; margin-top: -0.03rem;}
+.checkbox-icon.checked{background: url("../../images/zh_16.png") no-repeat 50% 50%; background-size: 0.24rem;}
+
+
+
+.show_alert img{
+    width:2.04rem;
+    height:1.275rem;
+}
+body{
+    /*width:6.4rem;*/
+    /*max-width:7.5rem;*/
+    width:100%;
+    color: #333333;
+}
+.fanhui,.kong{
+    width:1rem;
+}
+.header,header{
+    height:0.8rem;
+    background: #feabb5;
+    width: 6.4rem;
+    color: #ffffff;
+    text-align: center;
+    line-height:0.8rem;
+    font-size: 0.3rem;
+    position: fixed;
+    top:0;
+    z-index: 2;
+}
+.sharebtn{
+    width:0.391rem;
+    height:0.391rem;
+    background:url("../img/share.png") no-repeat;
+    background-size:100%;
+    position: absolute;
+    top:0.2rem;
+    right:0.256rem;
+    z-index:9;
+}
+
+.head{
+    width: 6.4rem;
+    height: 0.8rem;
+}
+
+/*头部*/
+header, .header{width: 6.4rem; height: 0.8rem; position: fixed; top:0; background: rgb(252, 172, 182); display: block; text-align: center; line-height: 0.8rem; z-index: 9;}
+.head-left{width: 1rem; height: 0.8rem; float: left;}
+.head-center{width: 4.4rem; height: 0.8rem; float: left; color:#FFF; font-size: 0.28rem; position: relative;}
+.head-right{width: 1rem; height: 0.8rem; float: left; font-size: 0.22rem; text-align: center;}
+.head{width: 6.4rem; height: 0.8rem;}
+.icon-back{display: block; width: 1rem; height: 0.8rem; float: left; background: url("../../images/back.png") no-repeat 30% 50%; background-size: 0.2rem;}

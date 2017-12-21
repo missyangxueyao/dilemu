@@ -1,0 +1,70 @@
+<!--延长收货-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">延长收货</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<div class="delivery-after-content">
+    <span>延长收货时间可以让买家有更多的时间来“确认收货”，请选择延长收货时间</span>
+    <h1>选择延长时间</h1>
+    <div class="after-btn-s">
+        <span class="checked" data-day="1">1天</span>
+        <span data-day="2">2天</span>
+        <span data-day="3">3天</span>
+        <span data-day="4">4天</span>
+        <span data-day="5">5天</span>
+        <span data-day="6">6天</span>
+        <div class="clear"></div>
+    </div>
+</div>
+<span class="btn" id="delivery-after-btn" onclick="confirmDelivery();">确认延长</span>
+<script type="text/javascript">
+    var data_day = 1;
+    var param = get_param();
+    $(function () {
+        if (!checkLogin(false)) {
+            return false;
+        }
+        $(".after-btn-s > span").click(function () {
+            var obj = $(this);
+            if (obj.hasClass("checked")) {
+                return false;
+            }
+            obj.addClass("checked").siblings("span").removeClass("checked");
+            data_day = obj.attr('data-day');
+        });
+    });
+
+    /**
+     * 延长收货
+     */
+    function confirmDelivery() {
+        requestData('order_delay_cofirm.htm', {id: param.id, days: data_day}, function (data) {
+            if (data.success) {
+                show_alert_back(data.msg);
+            } else {
+                show_alert(data.msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>

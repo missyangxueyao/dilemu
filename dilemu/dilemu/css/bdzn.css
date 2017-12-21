@@ -1,0 +1,16 @@
+.sameproduct-title{
+    height:0.91rem;
+    background: url("../img/sameproductsj.png") no-repeat bottom center;
+    background-size:0.357rem 0.17rem;
+}
+.sameproduct-title h1{
+    font-size: 0.289rem;
+    color: #333333;
+    line-height:0.629rem;
+    text-align: center;
+    margin-top:0.102rem;
+}
+/*二级分类页面*/
+.bannerPopup h2 span{
+    font-size: 0.256rem;
+}

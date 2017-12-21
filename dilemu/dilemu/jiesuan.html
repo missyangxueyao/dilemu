@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/jiesuan.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="header">
+结算
+</div>
+<!--没有收货地址-->
+<!--<div class="newadd">-->
+    <!--<a href="#">新增收货地址</a>-->
+<!--</div>-->
+<!--有收货地址-->
+<div class="address">
+    <a href="javascript:void(0)">
+        <p>张嘉译 15861735427</p>
+        <p>上海 上海市 徐汇区 石龙路767号A座1306室</p>
+    </a>
+</div>
+<p class="newadd-fg"></p>
+<div class="jiesuan-product">
+    <img src="img/buycar6.png" alt="">
+    <div class="jiesuan-productText">
+        <p>迪乐姆 创意梦幻水晶星星纽扣</p>
+        <span class="color">颜色： 红色</span>
+        <input class="danjia" value="￥18.00">
+        <span class="num">X 2</span>
+    </div>
+    <!--<div class="jiesuan-productNum">-->
+    <!--</div>-->
+</div>
+<div class="youhui">
+    <h1>优惠券</h1>
+    <ul class="yh">
+        <li><a href="">暂无优惠券可用</a></li>
+        <li>
+            可用1310积分抵扣￥13.1
+            <label class="checkbox_label">
+                <i class="check"></i>
+                <input type="checkbox" value="1" name="agree" class="hidden">
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="youhui pay">
+    <h1>支付方式</h1>
+    <ul class="payWay">
+        <li>
+            支付宝支付
+            <label class="radio_label">
+                <i class="check"></i>
+                <input type="radio" value="1" name="agree" class="hidden">
+            </label>
+        </li>
+        <li>
+            微信支付
+            <label class="radio_label">
+                <i class="check"></i>
+                <input type="radio" value="1" name="agree" class="hidden">
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="footer">
+    <span class="total-text">合计: </span>
+    <span class="price"> ￥37.00</span>
+    <span> (含运费5元) </span>
+    <input type="button" value="支付">
+</div>
+<script>
+    $(".checkbox_label").click(function(){
+        var obj = $(this);
+        if(obj.children("input").attr("checked")){
+            obj.children("i").addClass("checked");
+        }else{
+            obj.children("i").removeClass("checked");
+        }
+    });
+    $(".radio_label").click(function(){
+        $(this).find("i").addClass('checked').removeClass('check');
+        $(this).parent().siblings().find("i").removeClass('checked').addClass("check")
+    })
+    $(".footer").find('input').click(function(){
+        show_alert(' ',' ','pay.html')
+        $(".alert_dialog").css('display','none')
+    })
+
+</script>
+
+</body>
+</html>

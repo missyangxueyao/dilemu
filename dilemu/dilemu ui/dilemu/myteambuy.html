@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的团购</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/jiesuan.css">
+    <link rel="stylesheet" href="css/teambuy.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="header">
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">我的团购</div>
+    <div class="head-right"></div>
+</div>
+<div class="head"></div>
+<div class="jiesuan-product">
+    <img src="img/buycar6.png" alt="">
+    <div class="jiesuan-productText">
+        <p>迪乐姆 创意梦幻水晶水晶纽扣</p>
+        <span class="color">颜色： 红色</span>
+        <input class="danjia" value="￥18.00">
+        <span class="num">3人成团</span>
+    </div>
+</div>
+<div class="inveteFriends">
+    <p>成团中</p>
+    <h1>距离拼团结束还剩</h1>
+    <div class="clock"></div>
+    <h2>还差 <span>2</span> 位小伙伴即可拼团成功</h2>
+    <div class="headpic">
+        <span class="headpic-has"></span>
+        <span class="headpic-no"></span>
+        <span class="headpic-no"></span>
+    </div>
+</div>
+<input type="button" class="inveteFriends-btn" value="邀请好友">
+
+
+<script src="src/countdown.js"></script>
+
+<script>
+    //        倒计时
+    $('.clock').countdown("2017/05/30 22:00:00", function(event) {
+        var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+        $(this).html(event.strftime(
+            totalHours + ' : %M : %S '
+        ));
+    });
+</script>
+</body>
+</html>

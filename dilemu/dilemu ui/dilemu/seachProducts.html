@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢乐时光</title>
+    <meta id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/seach.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+</head>
+<style>
+    .header{
+        padding-bottom: 0.652rem;
+    }
+</style>
+<body style="background: #ffffff;">
+<div class="header">
+    <form method="get" action="seachProducts.html" onsubmit="return false;">
+        <input type="text" style="width: 5.034rem;" placeholder="输入商品名称" class="seachHeader-box">
+    </form>
+    <span></span>
+    <div class="seachHeader-remove">
+        <a href="javascript:void(0)" onclick="history.go(-2);">取消</a>
+    </div>
+</div>
+<div class="head"></div>
+<!--搜索到商品的情况-->
+<div class="container sameproduct-List">
+    <ul class="row">
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list3.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list3.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list3.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list1.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list3.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+        <li class="col-xs-6 column">
+            <a href="#">
+                <img src="img/prduct_list1.png" alt="">
+                <h1>果冻蜡烛</h1>
+                <p><span>￥ </span> 9.90</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--没有搜索到商品的情况-->
+<div class="seach-noproduct">
+    抱歉，没有找到相应的商品
+</div>
+</body>
+<script>
+    $(".header").click(function(){
+        $(".header").find('input').val(" ").focus()
+    })
+</script>
+</html>

@@ -1,0 +1,7 @@
+.top-right > .userInfo:after{display: none;  border: none;}
+.product-like-box #likeGoods .swiper-button-next, .product-like-box #likeGoods .swiper-button-prev{background: #FFF;}
+.product-like-box #likeGoods .swiper-slide{float: left; width: 100px; margin-right: 43px;}
+.product-like-box #likeGoods .swiper-wrapper{overflow: scroll}
+.buyLimit-right .buyLimit-goods .swiper-slide{width: 226px; float: left; margin-right: 33px;}
+.buyLimit-right .buyLimit-goods .swiper-button-next, .buyLimit-right .buyLimit-goods .swiper-button-prev{background: #FFF;}
+.buyLimit-right .buyLimit-goods .swiper-wrapper{overflow: scroll;}

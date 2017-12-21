@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>迪乐姆-退货退款</title>
+    <link rel="shortcut icon" href="./dilemu.ico"/>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<!----------------------------------- 头部 start ------------------------------------->
+<div id="top"></div>
+<div id="top_"></div>
+<!----------------------------------- 头部 end ------------------------------------->
+
+<div class="w-1200" style="padding-bottom: 20px;">
+    <div class="member-order" style="padding-bottom: 5px;">
+        <table class="list_table carTable">
+            <thead>
+            <tr>
+                <th style="text-align: left; padding-left: 15px;" colspan="2">订单号：201705038874 &nbsp;&nbsp; 2017.07.14 14:50</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>实付款</th>
+                <th>优惠券</th>
+                <th>订单状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="https://dilemu-app.oss-cn-shanghai.aliyuncs.com/shop/goodslist/8e97eebb-9f44-429e-a188-010a2cb5a60b.jpg?x-oss-process=image/resize,w_100" onerror="images/none-image.png"></td>
+                <td><div class="goodsCartNames"><h1>迪乐姆儿童智能系列 幼儿动手能力玩具 喷气式太空船</h1><h2>颜色：鹅黄色 &nbsp;&nbsp; 尺寸：25cm*25cm</h2></div></td>
+                <td>￥18.00</td>
+                <td>1</td>
+                <td><h1>￥41.00</h1><h2>含运费￥20.00</h2></td>
+                <td>未使用</td>
+                <td style="width: 120px;">待评价</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="member-order">
+        <div class="order-time-info">
+            <div class="left">
+                <h1>申请退款</h1>
+            </div>
+            <div class="return-box">
+                <div class="return-list">
+                    <span>货物状态</span>
+                    <select>
+                        <option value="">请选择</option>
+                        <option value="1">已收到货物</option>
+                        <option value="2">未收到货物</option>
+                    </select>
+                </div>
+                <div class="return-list">
+                    <span>退款原因</span>
+                    <select>
+                        <option value="">请选择</option>
+                        <option value="1">不喜欢</option>
+                        <option value="2">空包裹</option>
+                    </select>
+                </div>
+                <div class="return-list" style="height: 60px;">
+                    <span>退款金额：</span>
+                    <em>￥</em><input name="return_money" value="41.00" onchange="ret.checkPriceValue(this);"/>
+                    <div>最多￥41.00 含发货邮费￥5.00</div>
+                </div>
+                <div class="return-list">
+                    <span>退款说明</span>
+                    <textarea placeholder="选填"></textarea>
+                </div>
+                <div class="return-list">
+                    <span>上传凭证</span>
+                    <div class="return-images">
+                        <span class="upload-btn up_img" id="up_img">
+                            <input type="file" accept="image/*" id="__image__" name="imgFile" onchange="ret.upload('up_img', '__image__', 'images_value')"/>
+                        </span>
+                        <input type="hidden" id="images_value" value="">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="btn red-btn" style="margin: 0 auto; display: block;">提交</a>
+    </div>
+</div>
+
+<!----------------------------------- 底部 start ------------------------------------->
+<div id="footer"></div>
+<!----------------------------------- 底部 end ------------------------------------->
+<script type="text/javascript" id="loadScript" data-param="" src="js/load.js"></script>
+<script type="text/javascript" src="js/jquery.upload.js"></script>
+<script type="text/javascript">var allPrice = 41.00;</script>
+<script type="text/javascript" src="js/dev/order_return.js"></script>
+</body>
+</html>

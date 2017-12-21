@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>迪乐姆-结算</title>
+    <link rel="shortcut icon" href="./dilemu.ico"/>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<!----------------------------------- 头部 start ------------------------------------->
+<div id="top"></div>
+<div id="top_"></div>
+<!----------------------------------- 头部 end ------------------------------------->
+
+<div class="w-1200" style="padding-bottom: 20px;">
+    <!-- 进度条 -->
+    <div class="car_progress_bar">
+        <span class="checked z4"><em>1</em>查看购物车</span>
+        <span class="checked z3"><em>2</em>填写核对购物信息</span>
+        <span class="z2"><em>3</em>在线支付</span>
+        <span class="z1"><em>4</em>订单完成</span>
+    </div>
+    <div class="cart_goods_content">
+        <table class="list_table carTable">
+            <thead>
+            <tr>
+                <th style="text-align: left; width: 85px;"></th>
+                <th style="width: 210px;">宝贝<em style="display: inline-block; width: 80px;">&nbsp;</em></th>
+                <th>单价</th>
+                <th>数量</th>
+                <th style="width: 127px;">总计</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="http://dilemu-app.oss-cn-shanghai.aliyuncs.com/shop/goodslist/8e97eebb-9f44-429e-a188-010a2cb5a60b.jpg?x-oss-process=image/resize,w_100"/></td>
+                <td><div class="goodsCartNames"><h1>迪乐姆儿童智能系列 幼儿动手能力玩具 喷气式太空船</h1><h2>颜色：鹅黄色 &nbsp;&nbsp; 尺寸：25cm*25cm</h2></div></td>
+                <td>￥18.00</td>
+                <td>1</td>
+                <td>￥18.00</td>
+            </tr>
+
+            <tr>
+                <td><img src="http://dilemu-app.oss-cn-shanghai.aliyuncs.com/shop/goodslist/8e97eebb-9f44-429e-a188-010a2cb5a60b.jpg?x-oss-process=image/resize,w_100"/></td>
+                <td><div class="goodsCartNames"><h1>迪乐姆儿童智能系列 幼儿动手能力玩具 喷气式太空船</h1><h2>颜色：鹅黄色 &nbsp;&nbsp; 尺寸：25cm*25cm</h2></div></td>
+                <td>￥28.00</td>
+                <td>1</td>
+                <td>￥28.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="product-like-box">
+        <div class="product-like-title">
+            <span class="confirmTitle">收货人地址</span>
+        </div>
+        <div class="confirmAddress">
+            <div onclick="car_step2.checkAdd(this);" class="list"><em>张嘉译</em>上海 上海市 徐汇区 旭龙路767号A座1036室</div>
+            <div onclick="car_step2.checkAdd(this);" class="list"><em>张嘉译</em>上海 上海市 徐汇区 旭龙路767号A座1036室</div>
+            <div onclick="car_step2.checkAdd(this, true);" class="list check"><em>使用新地址</em></div>
+            <div class="newAddressInfo" style="display: block;">
+                <div>
+                    <span><em>﹡</em>收货人：</span>
+                    <input style="width: 240px;" type="text" class="must" name="realName"/>
+                </div>
+                <div>
+                    <span><em>﹡</em>所在地：</span>
+                    <select><option value="">请选择</option></select><select><option value="">请选择</option></select><select><option value="">请选择</option></select>
+                </div>
+                <div>
+                    <span><em>﹡</em>详细地址：</span>
+                    <input style="width: 360px;" type="text" class="must" name="realName"/>
+                </div>
+                <div>
+                    <span><em style="opacity: 0;">﹡</em>邮政编码：</span>
+                    <input type="text" class="must" name="realName"/>
+                </div>
+                <div>
+                    <span><em>﹡</em>手机号码：</span>
+                    <input style="width: 150px;" type="text" class="must" name="realName"/>
+                    <span>或固定电话：</span>
+                    <input style="width: 150px;" type="text" class="must" name="realName"/>
+                    &nbsp; 固定电话格式如 010-12345678 或 01012345678
+                </div>
+                <a href="javascript:void(0);" class="saveAddInfo">保存收货人信息</a>
+            </div>
+        </div>
+        <div class="product-like-title">
+            <span class="confirmTitle">优惠券</span>
+        </div>
+        <!-- 无优惠券 -->
+        <!--<div class="none_coupon">暂无优惠券可用</div>-->
+        <!-- 优惠券 -->
+        <div class="has_coupon">
+            <div data-id="" onclick="car_step2.coupon(this);" class="coupon_box check">不使用优惠券</div>
+            <div data-id="1" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="2" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="3" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="4" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="5" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="6" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+            <div data-id="7" onclick="car_step2.coupon(this);" class="coupon_box coupon_content"><em>￥</em><h1>20</h1><h2>满100元可用</h2></div>
+        </div>
+
+        <div class="product-like-title">
+            <span class="confirmTitle">支付方式</span>
+        </div>
+        <div class="confirmPayment">
+            <span onclick="car_step2.payment(this);">支付宝支付</span>
+            <span onclick="car_step2.payment(this);">微信支付</span>
+        </div>
+    </div>
+
+    <div class="product-like-box" style="padding: 10px 20px;">
+        <div class="count_step2">
+            <em>合计：</em>
+            <span class="integral" onclick="car_step2.integral(this);">可用1310积分抵扣￥13.10</span>
+            <span class="total"><em>￥23.00</em>（含运费5.00元）</span>
+            <a href="buy_step4.html">立即支付</a>
+        </div>
+    </div>
+</div>
+
+
+<!----------------------------------- 底部 start ------------------------------------->
+<div id="footer"></div>
+<!----------------------------------- 底部 end ------------------------------------->
+<script type="text/javascript" id="loadScript" data-param="" src="js/load.js"></script>
+<script type="text/javascript" src="js/dev/goodsCart.1.0.js"></script>
+</body>
+</html>

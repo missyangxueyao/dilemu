@@ -1,0 +1,90 @@
+<!-- 大转盘抽奖页面 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>迪乐姆</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/awardRotate.js"></script>
+    <script type="text/javascript" src="js/lottery.js"> </script>
+</head>
+<body style="background:rgb(244, 134, 142);overflow-x:hidden;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">抽奖</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<div id="lottery_top"></div>
+<div style="height: 4.5rem;"></div>
+<div id="lottery_yum"></div>
+<div id="canvas">
+    <img src="images/lottery/_bwb@2x.png" id="_bwb" style="display:none;" />
+    <img src="images/lottery/_cdb@2x.png" id="_cdb" style="display:none;" />
+    <img src="images/lottery/_lgx@2x.png" id="_lgx" style="display:none;" />
+    <img src="images/lottery/_sld@2x.png" id="_sld" style="display:none;" />
+    <img src="images/lottery/_zpg@2x.png" id="_zpg" style="display:none;" />
+    <div class="banner">
+        <div class="turnplate" style="background-image:url(images/lottery/turnplate-bg.png);background-size:100% 100%;">
+            <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+            <img class="pointer" src="images/lottery/lottery_pointer.png"/>
+        </div>
+    </div>
+</div>
+<div id="lottery_shadow"></div>
+<div id="lottery_text">
+    <h1>今日还可以抽奖<em>3</em>次</h1>
+    <h2>每次抽奖消耗20积分</h2>
+</div>
+<div id="lucky_user">
+    <h1>—<em>中奖名单</em>—</h1>
+    <table>
+        <tr><td>***去流浪</td><td>抽中500G移动硬盘</td><td>2017.05.04</td></tr>
+        <tr><td>***去流浪</td><td>抽中500G移动硬盘</td><td>2017.05.04</td></tr>
+        <tr><td>***去流浪</td><td>抽中500G移动硬盘</td><td>2017.05.04</td></tr>
+        <tr><td>***去流浪</td><td>抽中500G移动硬盘</td><td>2017.05.04</td></tr>
+        <tr><td>***去流浪</td><td>抽中500G移动硬盘</td><td>2017.05.04</td></tr>
+    </table>
+</div>
+<div id="lottery_rule">
+    <h1>—<em>抽奖规则</em>—</h1>
+    <h2>1、每个用户每天第一次抽奖免费；</h2>
+    <h2>2、每个用户每天第二次开始每次消耗20积分；</h2>
+    <h2>3、每个用户每天最多抽奖10次；</h2>
+    <h2>4、本次活动最终解释权归和盛教育所有。</h2>
+</div>
+<!-- 抽到奖品 -->
+<div class="dialog lottery_lucky" style="display: none;">
+    <div class="lottery_dialog">
+        <img src="images/lottery/lottery_yes@2x.png"/>
+        <h1>恭喜，中奖啦</h1>
+        <h2>运气太好，挡都档不住</h2>
+        <div style="height: 1.5rem;"></div>
+        <h3>获得</h3>
+        <h4 id="lottery_goods">爱华仕 拉杆箱</h4>
+        <span class="btn" onclick="hideShowMessage(this);">我知道了</span>
+    </div>
+</div>
+<!-- 没抽到奖品 -->
+<div class="dialog lottery_none" style="display: none;">
+    <div class="lottery_dialog">
+        <img src="images/lottery/lottery_none@2x.png"/>
+        <h1>抱歉，未中奖</h1>
+        <h2>不要泄气，再接再厉</h2>
+        <div style="height: 1.5rem;"></div>
+        <span class="btn" onclick="hideShowMessage(this);">我知道了</span>
+    </div>
+</div>
+</body>
+</html>

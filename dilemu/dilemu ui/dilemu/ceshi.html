@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<script>
+    $.ajax({
+         //        url:allurl+'goodsClass.htm',
+         url:"http://121.199.8.244:8780/hsshop/api/goodsClass.htm",
+         type:"post",
+         //        data:data,
+         dataType:"json",
+         cache: false,
+         success:function(e){
+         alert("11")
+        }
+     })
+</script>
+</body>
+</html>

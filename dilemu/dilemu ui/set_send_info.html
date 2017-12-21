@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>迪乐姆</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="select-type/mobile-select-area.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="select-type/dialog.js"></script>
+    <script type="text/javascript" src="select-type/mobile-select-area.js"></script>
+    <style type="text/css">
+        .ui-scroller>div{width: 100%;}
+        .MobileSelectDate .ui-scroller>div{width: 33%}
+    </style>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">填写物流信息</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<div class="send-info-content">
+    <h1>请填写正确的物流信息</h1>
+    <h2>物流公司</h2>
+    <input type="text" value="" placeholder="请选择物流公司" id="send_comp" readonly="readonly"/>
+    <h2>物流单号（运单号）</h2>
+    <input type="text" value="" placeholder="输入运单号"/>
+</div>
+<span class="btn" id="delivery-after-btn">提交</span>
+<script type="text/javascript">
+    var selectArea = new MobileSelectArea();
+    selectArea.init({trigger:'#send_comp',data:'select-type/send_comp.json', position:"bottom", id:'selectArea1'});
+</script>
+</body>
+</html>

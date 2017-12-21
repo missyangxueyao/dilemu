@@ -1,0 +1,70 @@
+<div class="fixed-right">
+    <div class="back-up" onclick="footer.top();"></div>
+    <div class="app-code"></div>
+    <div class="feedback"></div>
+</div>
+<div class="footer-info w-1200">
+    <div class="warming">“成长，就是用幼小善良的心灵，努力面对繁杂的世界” &nbsp;&nbsp;&nbsp;&nbsp; By 迪乐姆</div>
+    <img src="images/app.png" class="app">
+    <div class="app_logo">
+        <img src="images/logo@2x.png">
+        <h1>扫描下载手机版</h1>
+        <h1>开启宝宝的心灵之旅</h1>
+    </div>
+    <div class="footer-right">
+        <div class="footer-links" style="width: 110px;">
+            <a href="javascript:void(0);">关于我们</a>
+            <a href="javascript:void(0);">加入我们</a>
+            <a href="javascript:void(0);">联系我们</a>
+            <a href="javascript:void(0);">商务合作</a>
+        </div>
+        <div class="footer-links" style="width: 110px;">
+            <a href="javascript:void(0);">用户帮助</a>
+            <a href="javascript:void(0);">意见反馈</a>
+            <a href="javascript:void(0);">法律声明</a>
+        </div>
+        <div class="footer-links">
+            <a href="javascript:void(0);">友情链接</a>
+            <a href="javascript:void(0);" class="links">迪乐姆</a>
+            <a href="javascript:void(0);" class="links">和盛教育</a>
+            <a href="javascript:void(0);" class="links">堆糖</a>
+            <a href="javascript:void(0);" class="links">想去</a>
+            <a href="javascript:void(0);" class="links">网易亲子</a>
+            <a href="javascript:void(0);" class="links">更多 >></a>
+        </div>
+        <div class="footer-links" style="width: 200px; margin-left: 30px;">
+            <a href="javascript:void(0);">联系我们</a>
+            <a href="javascript:void(0);" class="no-links">邮箱：service@harsom.com</a>
+            <a href="javascript:void(0);" class="no-links">电话：400-666-8888</a>
+            <a href="javascript:void(0);" class="no-links">工作时间：09:00-18:00(周一至周五)</a>
+        </div>
+    </div>
+</div>
+<div class="footer-copy">地址：上海市浦东新区金沪路1222号2楼和盛教育 &nbsp;&nbsp; • &nbsp;&nbsp; 沪ICP备14785578号 &nbsp;&nbsp; • &nbsp;&nbsp; Copyright &copy; 2017 &nbsp;&nbsp; 和盛教育</div>
+<script type="text/javascript">
+    new function () {
+        var _self = this;
+        _self.fixed = function() {
+            var obj = $(".fixed-right"), bodyWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            if (bodyWidth < 1126) {obj.css("right", "0");} else {var right = (bodyWidth - 1126) / 2;obj.css("right", right + "px");}
+        }
+        window.addEventListener('resize',function(){_self.fixed();},false);
+        _self.fixed();
+    };
+
+    window.onscroll = function () {
+        var scoreTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var dom = $(".fixed-right");
+        if (scoreTop >= 430 && dom.css("display") == "none") {
+            dom.show();
+        } else if (dom.css("display") == "block" && scoreTop < 430) {
+            dom.hide();
+        }
+    }
+    
+    var footer = {
+        top: function () {
+            $(document.body).animate({scrollTop: 0}, 200);
+        }
+    }
+</script>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢乐时光</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden; background: #F4F4F4;">
+<header>
+    <div class="head-left"><i class="icon-back" onclick="getBackShuaXin();"></i></div>
+    <div class="head-center">个人中心</div>
+    <div class="head-right"></div>
+</header>
+<div class="head"></div>
+<div class="member-common-action" onclick="redirect('orders.html')">全部订单 <em>查看全部订单</em></div>
+<div class="member-order-status-box">
+    <div class="member-order-status-content">
+        <div class="member-order-main" onclick="redirect('orders.html?status=order_submit')" id="order_submit">
+            <i></i>
+            <h1>待付款</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('orders.html?status=order_pay')" id="order_pay">
+            <i class="send"></i>
+            <h1>待发货</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('orders.html?status=order_shipping')" id="order_shipping">
+            <i class="finish"></i>
+            <h1>待收获</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('orders.html?status=order_receive')" id="order_receive">
+            <i class="assess"></i>
+            <h1>待评价</h1>
+        </div>
+    </div>
+</div>
+<div class="member-order-status-box">
+    <div class="member-order-status-content">
+        <div class="member-order-main" onclick="redirect('group_buy.html')">
+            <i class="group"></i>
+            <h1>我的团购</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('my_coupon.html')">
+            <i class="coupon"></i>
+            <h1>我的优惠券</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('integral.html')">
+            <i class="integral"></i>
+            <h1>我的积分</h1>
+        </div>
+        <div class="member-order-main" onclick="redirect('returns.html')">
+            <i class="returned"></i>
+            <h1>退换货</h1>
+        </div>
+    </div>
+</div>
+<div class="member-common-action cart" onclick="redirect('buycar.html')">购物车 </div>
+<div class="member-common-action foot_place" onclick="redirect('foot_place.html')">我的足迹 </div>
+<div class="member-common-action collect" onclick="redirect('my_collect.html')">我的收藏 </div>
+<div class="member-common-action message" onclick="redirect('message.html')">我的消息 </div>
+<div class="member-common-action address" onclick="redirect('my_address.html')">我的收获地址 </div>
+<script type="text/javascript">
+    getThisData();
+    function getThisData() {
+        if (!checkLogin(false)) {
+            return false;
+        }
+        requestData("user_account.htm", {}, function (data) {
+            if (!data.success) {
+                return false;
+            }
+            $("#order_submit").append("<em>" + data.data.order_submit + "</em>");
+            $("#order_pay").append("<em>" + data.data.order_pay + "</em>");
+            $("#order_shipping").append("<em>" + data.data.order_shipping + "</em>");
+            $("#order_receive").append("<em>" + data.data.order_receive + "</em>");
+        });
+    }
+</script>
+</body>
+</html>

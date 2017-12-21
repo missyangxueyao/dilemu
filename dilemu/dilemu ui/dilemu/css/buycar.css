@@ -1,0 +1,205 @@
+body{
+    background: #dadada;
+}
+
+.productList{
+    width:100%;
+    /*height:2.048rem;*/
+    padding:0 0.256rem 0.1rem 0.256rem;
+    border-bottom:1px solid #dadada;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+.checkbox_label{
+    width:0.3rem;
+    float: left;
+    position: absolute;
+    top:50%;
+    left:0.256rem;
+    margin-top:-0.15rem;;
+}
+.check{
+    background: url("../img/buycar2.png") no-repeat;
+    background-size: 100%;
+}
+.checked{
+    background: url("../img/buycar4.png") no-repeat;
+    background-size: 100%;
+}
+.checkbox_label i,.allchose i{
+    display: block;
+    height:0.3rem;
+    width:0.3rem;
+}
+/*.productList-img{*/
+    /*!*float: left;*!*/
+    /*!*margin-left:0.512rem;*!*/
+    /*!*position: absolute;*!*/
+    /*!*top:50%;*!*/
+    /*!*left:0.256rem;*!*/
+/*}*/
+.productList-img{
+    display: block;
+    width:1.365rem;
+    height:1.365rem;
+    /*float: left;*/
+    margin-left:0.512rem;
+    position: absolute;
+    top:50%;
+    margin-top:-0.682rem;
+    /*vertical-align:middle;*/
+}
+.productList-detail{
+    float: right;
+    width:3.75rem;
+}
+.productList-detail p{
+    position: relative;
+}
+.productList-detail p span:nth-child(1){
+    display: block;
+    font-size:0.256rem;
+    line-height:0.512rem;
+    /*height:1.236rem;*/
+    padding-right:0.3rem;
+    padding-top:0.212rem;
+    width: 3.6rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+
+
+}
+
+.delete{
+    background: url("../img/buycar14.png") no-repeat;
+    background-size:0.256rem;
+    display:block;
+    height:0.256rem;
+    width:0.256rem;
+    position: absolute;
+    right:0rem;
+    top:0.32rem;
+    /*margin-left:0.3rem;*/
+}
+.colorDanjia{
+    float: left;
+    margin-bottom:0.1rem;
+}
+.productList-bottom{
+    clear: both;
+    overflow: hidden;
+}
+.productList-bottom span{
+    display: block;
+    line-height:0.476rem;
+    font-size: 0.221rem;
+    width:3.8rem;
+}
+.productList-bottom .color{
+    color: #999999;
+}
+.productList-bottom .danjia{
+    color: #e3676d;
+    display: block;
+    line-height:0.56rem;
+    font-size: 0.221rem;
+    width:1.2rem;
+    border:none;
+    float: left;
+}
+
+
+.noems-numCz{
+    float: right;
+    width:2.2rem;
+    /*margin-top:0.256rem;*/
+}
+.sign,.add{
+    width:0.59rem;
+    height:0.56rem;
+    line-height:0.56rem;
+    text-align: center;
+    font-size:0.26rem;
+}
+.sign{
+    background: url("../img/normsl.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.add{
+    background: url("../img/normsr.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.czNum{
+    display: block;
+    outline:none;
+    border:none;
+    width:0.9rem;
+    height:0.56rem;
+    background: url("../img/normsc.png") no-repeat;
+    background-size:100%;
+    float: left;
+    margin:0 0.02rem;
+    line-height:0.56rem;
+    text-align: center;
+    font-size:0.26rem;
+}
+
+/*底部*/
+.footer{
+    width:100%;
+    height:0.85rem;
+    clear: both;
+    overflow: hidden;
+    margin-top:0.05rem;
+    box-shadow: 0 2px 5px #999999;
+    position: fixed;
+    bottom:0;
+    background: #ffffff;
+    z-index: 9;
+}
+.allchose{
+    margin:0.297rem 0.17rem 0.297rem 0.256rem;
+    width:0.3rem;
+    height:0.3rem;
+    float: left;
+}
+.allchose-text{
+    /*display:inline-block;*/
+    float: left;
+    height:0.85rem;
+    line-height:0.85rem;
+    font-size:0.221rem;
+    color: #666666;
+}
+.total{
+    float: right;
+}
+.total-text{
+    line-height: 0.85rem;
+    font-size:0.221rem;
+    color: #999999;
+}
+.price{
+    color: #e3676d;
+    font-size: 0.262rem;
+}
+.total input{
+    border:none;
+    outline:none;
+    display: block;
+    color: #ffffff;
+    background: #feabb5;
+    text-align: center;
+    line-height: 0.85rem;
+    height:100%;
+    width:1.75rem;
+    font-size: 0.289rem;
+    margin-left:0.34rem;
+    float: right;
+}
